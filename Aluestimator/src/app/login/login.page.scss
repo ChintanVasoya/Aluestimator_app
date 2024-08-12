@@ -1,0 +1,187 @@
+.background {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  backdrop-filter: blur(70px);
+  width: 428px;
+  height: 926px;
+}
+
+.login-here {
+  position: absolute;
+  top: 0px;
+  left: 30px;
+}
+.welcome-back-youve {
+  margin: 0;
+}
+.welcome-back-youve-container {
+  position: absolute;
+  top: 71px;
+  left: 0px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+}
+.header {
+  position: absolute;
+  top: 97px;
+  left: 96px;
+  width: 228px;
+  height: 131px;
+  font-size: 30px;
+}
+.placeholder {
+  position: relative;
+  font-weight: 500;
+}
+.input {
+  width: 370px;
+  border-radius: 20px;
+  background-color: #f1f4ff;
+  // border: 2px solid #1f41bb;
+  // box-sizing: border-box;
+  // display: flex;
+  // flex-direction: row;
+  align-items: center;
+  // justify-content: flex-start;
+  // padding: 20px 35px 20px 20px;
+}
+.input1 {
+  width: 370px;
+  border-radius: 10px;
+  background-color: #f1f4ff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px 35px 20px 20px;
+  box-sizing: border-box;
+}
+.inputs {
+  position: absolute;
+  top: 302px;
+  left: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 29px;
+  font-size: 16px;
+  color: #626262;
+}
+.forgot-your-password {
+  position: absolute;
+  top: 463px;
+  left: 244px;
+  font-weight: 600;
+}
+.button {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  font-weight: 600;
+}
+.button-wrapper {
+  align-self: stretch;
+  border-radius: 10px;
+  background-color: #1f41bb;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 135px;
+  box-sizing: border-box;
+}
+.mask-group {
+  width: 370px;
+  border-radius: 10px;
+  background-color: #1f41bb;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+.button1 {
+  width: 370px;
+  border-radius: 10px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  font-size: 14px;
+  color: #494949;
+}
+.actions {
+  position: absolute;
+  top: 540px;
+  left: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 30px;
+  font-size: 20px;
+  color: #fff;
+}
+.or-continue-with {
+  position: relative;
+  font-weight: 600;
+}
+.phgoogle-logo-bold-icon {
+  width: 24px;
+  position: relative;
+  height: 24px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.phgoogle-logo-bold-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.google {
+  width: 60px;
+  border-radius: 10px;
+  background-color: #ececec;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+.component-6 {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.social-media {
+  position: absolute;
+  top: 736px;
+  left: 114px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+.login-screen {
+  width: 100%;
+  position: relative;
+  background-color: #fff;
+  height: 932px;
+  overflow: hidden;
+  text-align: center;
+  font-size: 14px;
+  color: #1f41bb;
+}
+
