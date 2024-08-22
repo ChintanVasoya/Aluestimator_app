@@ -1,0 +1,69 @@
+<!-- <img class="home-objects-icon" alt="" src="assets/object.svg"> -->
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <img alt="" src="assets/AluEstimator.svg">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item-group>
+    <ion-item-divider>
+      <ion-label>
+        <h2 *ngIf="!isEditable">
+          Making a new project!
+        </h2>
+        <h2 *ngIf="isEditable">
+          Edit
+        </h2>
+      </ion-label>
+    </ion-item-divider>
+    <ion-item class="ion-item">
+      <ion-input [(ngModel)]="project.name" class="input" label="Project Name " label-placement="floating"
+        fill="outline" placeholder="Project Name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="project.clientName" class="input" label="Client Name " label-placement="floating"
+        fill="outline" placeholder="Client Name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="project.address" class="input" label="Address " label-placement="floating" fill="outline"
+        placeholder="Address"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="project.city" class="input" label="City(City Address) " label-placement="floating"
+        fill="outline" placeholder="City(City Address)"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="project.number" class="input" label="Phone Number " label-placement="floating"
+        fill="outline" placeholder="Phone Number"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-select [(ngModel)]="project.coating" class="input" label="Select Coating" label-placement="floating"
+        fill="outline" placeholder="Select Coating"></ion-select>
+    </ion-item>
+    <div class="partition">
+      <ion-item>
+        <ion-select [(ngModel)]="project.sheet" class="input" label="Select Sheet" label-placement="floating"
+          fill="outline" placeholder="Select Sheet"></ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-select [(ngModel)]="project.glass" class="input" label="Select Glass " label-placement="floating"
+          fill="outline" placeholder="Select Glass "></ion-select>
+      </ion-item>
+    </div>
+    <ion-item>
+      <ion-select [(ngModel)]="project.type" class="input" label="Select Particular Type" label-placement="floating"
+        fill="outline" placeholder="Select Particular Type"></ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-textarea [(ngModel)]="project.comments" class="input" label="Comments" label-placement="floating"
+        fill="outline" placeholder="Comments"></ion-textarea>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-button (click)="save()" expand="block">Save</ion-button>
+</ion-content>

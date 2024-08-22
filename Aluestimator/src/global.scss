@@ -47,7 +47,7 @@
 
 .objects-icon {
     position: absolute;
-  }
+}
 
 .home-objects-icon {
     position: relative;
@@ -60,12 +60,30 @@ ion-fab-button::part(native) {
     background-color: #0054e9;
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.3), 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
     color: white;
-  }
+}
 
-ion-toolbar{
+ion-toolbar {
     --background: #004acd !important;
 }
 
-ion-menu-button{
+ion-menu-button {
     color: white !important;
+}
+
+ion-select {
+    --border-width: 0;
+}
+
+ion-textarea {
+    height: 15vh;
+    --border-width: 0;
+}
+
+ion-item {
+    --inner-border-width: 0 0 0px 0;
+}
+
+ion-item-divider {
+    border-bottom: 0;
+    color: black;
 }

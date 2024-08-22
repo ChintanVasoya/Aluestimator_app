@@ -1,0 +1,77 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <img alt="" src="assets/AluEstimator.svg">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item-group>
+    <ion-item-divider *ngIf="!projectData">
+      <ion-label>
+        <h2>
+          Please create a new structures
+        </h2>
+      </ion-label>
+    </ion-item-divider>
+    <!-- <ion-item-divider *ngIf="projectData">
+      <ion-label>
+        <h2>
+          Your Projects
+        </h2>
+      </ion-label>
+    </ion-item-divider> -->
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6" *ngFor="let item of projectData">
+          <ion-item class="project_list">
+
+            <div class="div1">
+              <div class="text-align">
+                <ion-icon class="icon" name="cube-outline"></ion-icon>
+              </div>
+              <div>
+                <h2 class="project_name"> {{item.height}} X {{item.width}} inch</h2>
+              </div>
+              <div>
+                <h2 class="project_name"> Qauntity : {{item.quantity}}</h2>
+                <h2 class="project_name"> Type : {{item.particulartype}}</h2>
+              </div>
+              <div>
+                <ion-grid>
+                  <ion-row>
+                    <ion-col class="text-align" size="6">
+                      <ion-icon (click)="editProjectItem(item)" class="action_button" name="create-outline"></ion-icon>
+                    </ion-col>
+                    <ion-col class="text-align" size="6">
+                      <ion-icon style="color: red;" class="action_button" name="trash-outline"></ion-icon>
+                    </ion-col>
+                  </ion-row>
+                </ion-grid>
+              </div>
+            </div>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item-group>
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button>
+      <ion-icon name="add-circle"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <div class="fab-div" (click)="goTowindow()">
+        <h5>Create a Window</h5>&nbsp; &nbsp;
+        <ion-fab-button>
+          <ion-icon name="cube-outline"></ion-icon>
+        </ion-fab-button>
+      </div>
+    </ion-fab-list>
+  </ion-fab>
+  <div>
+    <ion-button expand="block">Calculate</ion-button>
+  </div>
+</ion-content>

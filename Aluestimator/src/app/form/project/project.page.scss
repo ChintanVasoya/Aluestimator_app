@@ -1,0 +1,51 @@
+.fab-div {
+    width: max-content;
+    display: flex;
+    left: -30vw;
+    position: fixed;
+}
+
+
+.input {
+    width: 370px;
+    margin: 10px;
+    border-radius: 20px;
+    background-color: #f1f4ff;
+    // border: 2px solid #1f41bb;
+    // box-sizing: border-box;
+    // display: flex;
+    // flex-direction: row;
+    align-items: center;
+    // justify-content: flex-start;
+    // padding: 20px 35px 20px 20px;
+}
+
+h2 {
+    font-weight: 600;
+    margin-left: 15px;
+    font-size: 2.5vh;
+
+}
+
+.partition {
+    border-style: ridge;
+    margin: 10px;
+    border-radius: 15px;
+}
+
+.ion-content {
+    background-image: 'assets/object.svg';
+}
+
+ion-textarea {
+    border-radius: 20px !important;
+}
+
+.textarea-fill-outline.sc-ion-textarea-md-h {
+    --border-radius: 20px !important;
+
+}
+
+ion-button {
+    padding: 0 20px 0;
+}

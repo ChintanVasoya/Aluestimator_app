@@ -13,8 +13,8 @@ h2 {
 }
 
 .icon {
-    width: 20vw;
-    height: 10vh;
+    width: 30vw;
+    height: 15vh;
 }
 
 .item-inner {
@@ -25,7 +25,6 @@ h2 {
     background: #F1F4FF;
     width: 100%;
     border-radius: 10px;
-    display: flex;
 }
 
 
@@ -50,16 +49,28 @@ h2 {
 
 .project_name {
     margin-bottom: 0;
+    text-align: center;
     margin: 5px;
 }
 
 .project_list {
     background: #F1F4FF;
-    margin: 10px;
     border-radius: 10px;
 }
 
 .action_button {
     width: 2.5vh;
     height: 4vh;
+}
+
+.ion-item {
+    width: 50%;
+}
+
+.text-align {
+    text-align: center;
+}
+
+.ion-item-group {
+    display: flex;
 }

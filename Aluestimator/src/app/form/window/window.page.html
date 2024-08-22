@@ -1,0 +1,69 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <img alt="" src="assets/AluEstimator.svg">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item-group>
+    <ion-item-divider>
+      <ion-label>
+        <h2 *ngIf="!isEditable">
+          Creating a new window!
+        </h2>
+        <h2 *ngIf="isEditable">
+          Edit
+        </h2>
+      </ion-label>
+    </ion-item-divider>
+    <ion-item class="ion-item">
+      <ion-input [(ngModel)]="window.height" class="input" label="Window height" label-placement="floating"
+        fill="outline" placeholder="height"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="window.width" class="input" label="Window width" label-placement="floating" fill="outline"
+        placeholder="Width"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input [(ngModel)]="window.quantity" class="input" label="Window Qauntity " label-placement="floating"
+        fill="outline" placeholder="Qauntity"></ion-input>
+    </ion-item>
+    <div class="partition">
+      <ion-item>
+        <ion-select (ionChange)="setParticular($event)" [(ngModel)]="window.window" class="input" label="Select Window"
+          label-placement="floating" fill="outline" placeholder="Select Window">
+          <ion-select-option *ngFor="let windowtype of WindowTypes"
+            [value]="windowtype.type">{{windowtype.name}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-select [(ngModel)]="window.particulartype" class="input" label="Select Particular Type"
+          label-placement="floating" fill="outline" placeholder="Select Particular Type">
+          <ion-select-option *ngFor="let particulartypes of Particular_type"
+            [value]="particulartypes.type">{{particulartypes.name}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-select [(ngModel)]="window.track" class="input" label="Select Track" label-placement="floating"
+          fill="outline" placeholder="Select Track">
+          <ion-select-option *ngFor="let tracktypes of Tracktypes"
+            [value]="tracktypes.type">{{tracktypes.name}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </div>
+    <ion-item>
+      <ion-select [(ngModel)]="window.lockType" class="input" label="Select Lock Type" label-placement="floating"
+        fill="outline" placeholder="Select Lock Type"></ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-textarea [(ngModel)]="window.comments" class="input" label="Comments" label-placement="floating"
+        fill="outline" placeholder="Comments"></ion-textarea>
+    </ion-item>
+  </ion-item-group>
+
+  <ion-button (click)="save()" expand="block">Save</ion-button>
+</ion-content>

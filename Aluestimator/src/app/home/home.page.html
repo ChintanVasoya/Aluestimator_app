@@ -1,31 +1,72 @@
-
-
-<img class="home-objects-icon" alt="" src="assets/object.svg">
+<!-- <img class="home-objects-icon" alt="" src="assets/object.svg"> -->
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-   
-<img  alt="" src="assets/AluEstimator.svg">
+
+    <img alt="" src="assets/AluEstimator.svg">
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <ion-item-group>
+    <ion-item-divider *ngIf="!projects">
+      <ion-label>
+        <h2>
+          Please create a project
+        </h2>
+      </ion-label>
+    </ion-item-divider>
+    <ion-item-divider *ngIf="projects">
+      <ion-label>
+        <h2>
+          Your Projects
+        </h2>
+      </ion-label>
+    </ion-item-divider>
+    <ion-item class="project_list" *ngFor="let item of projects">
+
+      <div class="div1">
+        <div>
+          <ion-icon class="icon" name="cube-outline"></ion-icon>
+        </div>
+        <div class="div2" (click)="goToProject(item)">
+          <div>
+            <h1 class="project_name"> {{item.name}}</h1>
+          </div>
+          <div>
+            <h3 class="other_details"> {{item.clientName}}</h3>
+            <h3 class="other_details"> {{item.number}}</h3>
+          </div>
+
+        </div>
+        <div class="div3">
+          <div>
+            <ion-icon (click)="editProject(item)" class="action_button" name="create-outline"></ion-icon>
+          </div>
+          <div>
+            <ion-icon style="color: red;" class="action_button" name="trash-outline"></ion-icon>
+          </div>
+        </div>
+
+      </div>
+    </ion-item>
+  </ion-item-group>
   <ion-fab slot="fixed" vertical="bottom" horizontal="end">
     <ion-fab-button>
       <ion-icon name="add-circle"></ion-icon>
-      
-    </ion-fab-button>
-    <ion-fab-list side="top">
-      <div class="fab-div">
-      <h5>New Project</h5>&nbsp; &nbsp;
-      <ion-fab-button>
-        <ion-icon name="cube-outline"></ion-icon>
-      </ion-fab-button>
 
-        
-    </div>
+    </ion-fab-button>
+    <ion-fab-list side="top" routerLink="/createproject">
+      <div class="fab-div">
+        <h5>New Project</h5>&nbsp; &nbsp;
+        <ion-fab-button>
+          <ion-icon name="cube-outline"></ion-icon>
+        </ion-fab-button>
+
+
+      </div>
     </ion-fab-list>
   </ion-fab>
 </ion-content>
